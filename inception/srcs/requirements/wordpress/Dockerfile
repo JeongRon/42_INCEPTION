@@ -3,6 +3,7 @@ FROM debian:bullseye
 EXPOSE 9000
 
 COPY ./tools/script.sh /tmp/script.sh
+
 RUN apt-get update -y \
 	&& apt-get upgrade -y \
 	&& apt-get install -y php php-fpm php-mysql curl mariadb-client && \
